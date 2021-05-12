@@ -11,10 +11,10 @@ Instructor.destroy_all
 Student.destroy_all 
 
 
-(1..10).each do |id|
+10.times do 
     Student.create!(
         name: Faker::Name.name,
-        username: Faker::TvShows::TwinPeaks.character,
+        username: Faker::TvShows::TwinPeaks.unique.character,
         password: "Password",
         age: rand(3..72),
         email: Faker::Internet.email,
@@ -33,3 +33,16 @@ instructor_two = Instructor.create!(
     name: "Donna Diener",
     bio: "Expert skier, teaches children and young adults of all skill levels."
 )
+
+35.times do
+    Lesson.create!(
+        instructor_id: [instructor_one.id, instructor_two.id].sample,
+        student: Student.all.sample, 
+        level: ["beginner", "intermediate", "advanced"].sample,
+        appointment_day: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
+                          "Sunday"].sample
+        
+    )
+end
+
+puts "I am not sane, I need a cigarette and wine."

@@ -1,0 +1,19 @@
+<% if @lesson.errors.any? %>
+    <p><% @lesson.errors.full_messages.to_sentence %></p>
+<% end %>
+
+
+<%= form_with model: @lesson, local: true do |f| %>
+    <%= f.label :level %>
+    <%= f.text_field :level %>
+
+
+
+   <%= f.label :appointment_day %>
+   <%= f.select :appointment_day, ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
+   "Sunday"] %>
+    
+   <%= f.submit %>
+
+
+<% end %>

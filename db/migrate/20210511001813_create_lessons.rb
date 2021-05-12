@@ -4,8 +4,7 @@ class CreateLessons < ActiveRecord::Migration[6.1]
       t.integer :instructor_id
       t.integer :student_id
       t.string :level
-      t.datetime :appointment
-      t.time :time
+      t.string :appointment_day
 
       t.timestamps
     end

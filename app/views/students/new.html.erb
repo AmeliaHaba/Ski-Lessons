@@ -1,0 +1,24 @@
+<h1> Please Sign Up </h1>
+
+<%= form_with model: @student, local: true do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %> 
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+   <%= f.label :email %>
+   <%= f.email_field :email %>
+
+   <%= f.label :phone_number %>
+   <%= f.phone_field :phone_number %>
+    
+   <%= f.submit %>
+
+
+<% end %>

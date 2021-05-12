@@ -23,8 +23,7 @@ ActiveRecord::Schema.define(version: 2021_05_11_001813) do
     t.integer "instructor_id"
     t.integer "student_id"
     t.string "level"
-    t.datetime "appointment"
-    t.time "time"
+    t.string "appointment_day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

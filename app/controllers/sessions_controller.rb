@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         session[:student_id] = @student.id
         redirect_to @student
       else
-        flash[:danger] = 'Invalid username and password' 
+        flash[:danger] = 'Incorrect username and password' 
         render 'new'
       end
     end

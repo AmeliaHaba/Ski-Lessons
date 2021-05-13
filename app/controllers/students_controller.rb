@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+    before_action :redirect_if_not_logged_in, only: [:show]
 
     def new
         @student = Student.new

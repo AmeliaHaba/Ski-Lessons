@@ -5,7 +5,10 @@
 
 <%= form_with model: @lesson, local: true do |f| %>
     <%= f.label :level %>
-    <%= f.text_field :level %>
+    <%= f.select :level, ["beginner", "intermediate", "advanced"] %>
+
+    <%= f.label :instructor %>
+    <%= f.select :instructor_id, Instructor.all.collect {|i| [i.name, i.id]} %>
 
 
 

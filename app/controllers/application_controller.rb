@@ -7,12 +7,18 @@ class ApplicationController < ActionController::Base
         render "/home"
     end
 
+    def redirect_if_not_logged_in
+        if !logged_in?
+            redirect_to home_path
+        end
+    end 
+
     # def wrong_page
     #     render "/wrong_page"
     # end
 
 
-    def current_lecturer
+    def current_student
         @student = Student.find_by_id(session[:student_id])
     end
     

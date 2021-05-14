@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :lessons
   end
 
+  
   resources :instructors
 
   get '/', to: "application#home", as: 'home'

@@ -1,0 +1,13 @@
+<%= form_with model: @lesson, url: student_lesson_path, local: true do |f| %>
+    <%= f.label :instructor %>
+    <%= f.select :instructor_id, Instructor.all.collect {|i| [i.name, i.id]} %>
+    
+    <%= f.label :level %>
+    <%= f.select :level, ["beginner", "intermediate", "advanced"] %>
+
+   <%= f.label :appointment_day %>
+   <%= f.select :appointment_day, ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
+   "Sunday"] %>
+    
+   <%= f.submit "verify modified lesson" %> 
+<% end %>

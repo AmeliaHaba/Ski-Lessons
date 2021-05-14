@@ -12,11 +12,11 @@ Specs:
 - [X] Include login (how e.g. Devise)
 - [X] Include logout (how e.g. Devise)
 - [ ] Include third party signup/login (how e.g.OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes) (in route file)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (in route file)
+- [X] Include nested resource show or index (URL e.g. users/2/recipes) (in route file)
+- [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (in route file)
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [X] The application is pretty DRY
+- [X] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate

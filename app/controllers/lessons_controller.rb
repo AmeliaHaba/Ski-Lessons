@@ -31,6 +31,7 @@ class LessonsController < ApplicationController
         @lesson = Lesson.find(params[:id])
         @lesson.update(lesson_params)
         redirect_to student_lesson_path(@lesson)
+        
     end 
 
     def destroy

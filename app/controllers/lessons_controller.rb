@@ -12,7 +12,6 @@ class LessonsController < ApplicationController
         @lesson = Lesson.new
     end
 
-    
     def create
         @lesson = Lesson.new(lesson_params)
         @lesson.student = current_student

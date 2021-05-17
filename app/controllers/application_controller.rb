@@ -13,9 +13,9 @@ class ApplicationController < ActionController::Base
         end
     end 
 
-    # def wrong_page
-    #     render "/wrong_page"
-    # end
+    def wrong_page
+        render "/wrong_page"
+    end
 
 
     def current_student

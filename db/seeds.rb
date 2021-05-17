@@ -18,8 +18,7 @@ Student.destroy_all
         password: "Password",
         age: rand(3..72),
         email: Faker::Internet.email,
-        phone_number: Faker::PhoneNumber.phone_number
-   
+        phone_number: Faker::PhoneNumber.cell_phone.to_i
     )
 end
 

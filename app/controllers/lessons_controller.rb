@@ -3,6 +3,9 @@ class LessonsController < ApplicationController
     
     def index
         @lessons = current_student.lessons
+        @beginner_lessons = Lesson.beginner_level
+        @intermediate_lessons = Lesson.intermediate_level
+        @advanced_lessons = Lesson.advanced_level
     end
 
     def new
@@ -19,7 +22,6 @@ class LessonsController < ApplicationController
         end   
     end
 
-    
     def show
         @lesson = Lesson.find(params[:id])
     end
@@ -45,7 +47,6 @@ class LessonsController < ApplicationController
     def lesson_params
         params.require(:lesson).permit(:instructor_id, :student_id, :level, :appointment_day)
     end
-       
 
 
 end

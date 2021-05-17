@@ -1,4 +1,4 @@
-SKi Lessons: Sign up and shred!
+Ski Lessons: Sign up and shred!
 
 The user for this application is an adult, young adult, or child who wants to learn how to ski or continue to get better at skiing by signing up for a lesson. The user can login or sign-up and book a ski lesson with one of the two instructors. The student can read the instructor's bios to see who they would like to book the lesson with. The student can book a ski lesson, modify the ski lesson, or cancel the ski lesson. On the student profile page the user will be able to see their personal information. They can also click the lessons button to view all of their lessons. 
 

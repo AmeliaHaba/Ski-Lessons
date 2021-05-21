@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   get '/:anything', to: "application#wrong_page"
+  # work bitch.
   match '/auth/:provider/callback' => 'sessions#google', via: [:get,:post]
 end

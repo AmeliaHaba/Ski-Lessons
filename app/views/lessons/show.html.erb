@@ -4,5 +4,6 @@
 <h2> Lesson Day: <%= @lesson.appointment_day %> </h2>
 
 
+
 <%= link_to "Modify Lesson", edit_student_lesson_path(@student, @lesson) %>
 <%= link_to "Cancel Lesson", student_lesson_path(@student, @lesson), method: :delete %> 

@@ -3,15 +3,11 @@ Rails.application.routes.draw do
   resources :students do 
     resources :lessons
   end
-
-  
   resources :instructors
-
   get '/', to: "application#home", as: 'home'
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'  
   get '/:anything', to: "application#wrong_page"
-
-  
+  match '/auth/:provider/callback', to: 'sessions#google', via: [:get, :post]
 end

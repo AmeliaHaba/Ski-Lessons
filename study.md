@@ -1,0 +1,9 @@
+- flash danger, validation errors
+- helper methods in views
+- form_with/for
+- paths (nested routes)
+- scope
+- fix phone number seed data
+- add time to the lesson
+- .build
+- search function 

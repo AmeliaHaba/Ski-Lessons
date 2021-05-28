@@ -1,8 +1,8 @@
 <h1> Your Lessons </h1>
 
 <% if !@beginner_lessons.empty? %>
-    <h3> Here are your beginner lessons </h3>
-    <% @lessons.each do |lesson| %>
+<h2><u> Here are your beginner lessons </u> </h2>
+    <% @beginner_lessons.each do |lesson| %>
         <p>
         <h3> Instructor Name: <%= lesson.instructor.name %> </h3>
         <h3> Lesson Day: <%= lesson.appointment_day %> </h3>
@@ -14,24 +14,23 @@
     <% end %>
 <% end %>
 
-
 <% if !@intermediate_lessons.empty? %>
-    <h3> Here are your intermediate lessons </h3>
-    <% @lessons.each do |lesson| %>
+<h2> <u> Here are your intermediate lessons </u> </h2>
+    <% @intermediate_lessons.each do |lesson| %>
         <p>
         <h3> Instructor Name: <%= lesson.instructor.name %> </h3>
         <h3> Lesson Day: <%= lesson.appointment_day %> </h3>
         <h3> Level: <%= lesson.level %> </h3>
         <%= link_to "Modify Lesson", edit_student_lesson_path(current_student, lesson) %>
-        <%= link_to "Cancel Lesson", student_lesson_path(current_student, lesson), method: :delete %> 
+        <%= link_to "Cancel Lesson", student_lesson_path(current_student, lesson), method: :delete %>  
         </p>
         <br>
     <% end %>
 <% end %>
 
 <% if !@advanced_lessons.empty? %>
-    <h3> Here are your advanced lessons </h3>
-    <% @lessons.each do |lesson| %>
+<h2> <u> Here are your advanced lessons </u> </h2>
+    <% @advanced_lessons.each do |lesson| %>
         <p>
         <h3> Instructor Name: <%= lesson.instructor.name %> </h3>
         <h3> Lesson Day: <%= lesson.appointment_day %> </h3>

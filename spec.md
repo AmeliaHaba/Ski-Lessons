@@ -1,22 +1,43 @@
 # Specifications for the Rails Assessment
 Specs:
 - [X] Using Ruby on Rails for the project
+    -Used Ruby on Rails for entire project
 - [X] Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes) 
+    -Student has many lessons and instructors through lessons
+    -Instructor has many lessons and students through lessons
 - [X] Include at least one belongs_to relationship (x belongs_to y; e.g. Post belongs_to User)
+    -Lesson belongs to instructor and belongs to student
 - [X] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients) (many-to=many)
+    -Student has many instructors through lessons
+    -Instructor has many students through lessons
 - [X] Include at least one many-to-many relationship (x has_many y through z, y has_many x through z; e.g. Recipe has_many Items through Ingredients, Item has_many Recipes through Ingredients)
+    -Student has many instructors through lessons
+    -Instructor has many students through lessons
 - [X] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
+    -Lesson has level and appointment day 
 - [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+    -User, instructor, and lesson all have validations
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+    -Scope methods for levels
 - [X] Include signup (how e.g. Devise)
+    -Signup included
 - [X] Include login (how e.g. Devise)
+    -Login included
 - [X] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g.OmniAuth)
+    -Logout included
+- [X] Include third party signup/login (how e.g.OmniAuth)
+    -Omniauth not working! I spoke with you about this via slack. Please talk to Juan if you have questions!
 - [X] Include nested resource show or index (URL e.g. users/2/recipes) (in route file)
+    -Included in routes (student/2/lesson)
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (in route file)
+    -Included in routes
+    (student/2/lesson/new)
 - [X] Include form display of validation errors (form URL e.g. /recipes/new)
+    -Validation error included
 Confirm:
 - [X] The application is pretty DRY
 - [X] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [X] Views use helper methods if appropriate
+        -Uses current_student
+- [X] Views use partials if appropriate
+        -Nav bar as partial 

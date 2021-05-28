@@ -18,14 +18,14 @@ Student.destroy_all
         password: "Password",
         age: rand(3..72),
         email: Faker::Internet.email,
-        phone_number: Faker::PhoneNumber.cell_phone.to_i
+        phone_number: Faker::PhoneNumber.phone_number
     )
 end
 
 instructor_one = Instructor.create!(
 
     name: "Chuck Haba",
-    bio: "Expert skier, teaches adults of all skill levels."
+    bio: "Expert skier, all skill levels."
 )
 
 instructor_two = Instructor.create!(
@@ -39,7 +39,7 @@ instructor_two = Instructor.create!(
         student: Student.all.sample, 
         level: ["beginner", "intermediate", "advanced"].sample,
         appointment_day: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
-                          "Sunday"].sample
+        "Sunday"].sample
         
     )
 end

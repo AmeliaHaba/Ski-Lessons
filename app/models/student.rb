@@ -5,6 +5,5 @@ class Student < ApplicationRecord
     validates :username, presence: true 
     validates :email, uniqueness: true, presence: true 
 
-    has_secure_password
-    
+    has_secure_password 
 end

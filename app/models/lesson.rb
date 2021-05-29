@@ -8,5 +8,4 @@ class Lesson < ApplicationRecord
     scope :beginner_level, -> {where(level: "beginner")}
     scope :intermediate_level, -> {where(level: "intermediate")}
     scope :advanced_level, -> {where(level: "advanced")}
-  
 end

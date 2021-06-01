@@ -9,12 +9,12 @@ class LessonsController < ApplicationController
     end
 
     def new
-        @lesson = Lesson.new
+        #@lesson = Lesson.new #getting empty instance of lesson
+        @lesson = current_student.lessons.build
     end
 
     def create
-        @lesson = Lesson.new(lesson_params)
-        @lesson.student = current_student
+        @lesson = current_student.lessons.build(lesson_params)
         if @lesson.save
             redirect_to student_lesson_path(student_id: current_student.id, id: @lesson.id)
         else 

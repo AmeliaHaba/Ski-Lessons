@@ -22,6 +22,7 @@ Student.destroy_all
     )
 end
 
+    
 instructor_one = Instructor.create!(
 
     name: "Chuck Haba",

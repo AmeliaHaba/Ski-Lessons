@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_05_11_001813) do
     t.string "password_digest"
     t.integer "age"
     t.string "email"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

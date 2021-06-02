@@ -1,0 +1,31 @@
+<%= form_with model: @student, url: student_path, local: true do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br>
+    <br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %> 
+    <br>x
+    <br>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+
+   <%= f.label :email %>
+   <%= f.email_field :email %>
+   <br>
+   <br>
+
+   <%= f.label :phone_number %>
+   <%= f.phone_field :phone_number %>
+   <br>
+   <br>
+    
+   <%= f.submit "Confirm Changes" %>
+<% end %>
+

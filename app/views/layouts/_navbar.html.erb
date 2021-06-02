@@ -3,9 +3,10 @@
 <%= link_to 'Profile', student_path(current_student) %>
 <%= link_to 'Instructors', instructors_path %>
 <%= link_to 'Lessons', student_lessons_path(current_student) %>
+<%= link_to 'Book with Chuck', chuck_path %>
 <%= link_to 'Logout', logout_path, method: :delete %>
 <% else %>
 <%= link_to 'Signup', new_student_path %>
 <%= link_to 'Login', login_path %>
-<%= link_to "Login with Google", '/auth/google_oauth2', method: :post%>
+<%= link_to "Login with Google", '/auth/google_oauth2/callback', method: :post%>
 <% end %>

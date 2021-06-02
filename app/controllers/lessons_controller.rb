@@ -14,7 +14,7 @@ class LessonsController < ApplicationController
     end
 
     def create
-        @lesson = current_student.lessons.build(lesson_params)
+    @lesson = current_student.lessons.build(lesson_params)
         if @lesson.save
             redirect_to student_lesson_path(student_id: current_student.id, id: @lesson.id)
         else 
@@ -22,8 +22,8 @@ class LessonsController < ApplicationController
         end   
     end
 
-    def show
-        @lesson = Lesson.find(params[:id])
+    def show 
+    @lesson = Lesson.find(params[:id])     
     end
 
     def edit
@@ -33,7 +33,7 @@ class LessonsController < ApplicationController
     def update
         @lesson = Lesson.find(params[:id])
         @lesson.update(lesson_params)
-        redirect_to student_lesson_path(@lesson)
+        redirect_to student_lesson_path(current_student, @lesson)
     end 
 
     def destroy
@@ -42,11 +42,17 @@ class LessonsController < ApplicationController
         redirect_to student_lessons_path
     end 
 
+    def lesson_with_chuck
+        @lesson = current_student.lessons.build(instructor_id: 1, level: "intermediate", appointment_day: "Monday")
+        @lesson.save
+        redirect_to student_lessons_path(current_student)
+    end
+
+
     private
 
     def lesson_params
-        params.require(:lesson).permit(:instructor_id, :student_id, :level, :appointment_day)
-    end
-
+        params.require(:lesson).permit(:instructor_id, :level, :appointment_day)
+ end
 
 end

@@ -4,4 +4,7 @@
     <h2> <%= instructor.name %> </h2>
     <h2> <%= instructor.bio %> </h2>
 <% end %>
+<br>
 
+<h3> Most Popular Instructor: </h3>
+<h5> <%= @sorted_instructors[-1].name %> </h5>
